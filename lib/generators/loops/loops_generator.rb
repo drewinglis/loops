@@ -1,5 +1,5 @@
 # This generator bootstraps a Rails project for use with loops
-class LoopsGenerator < Rails::Generator::Base
+class LoopsGenerator < Rails::Generators::Base
   def manifest
     record do |m|
       # Generate app/loops directory and an example loop files
