@@ -17,14 +17,13 @@ rescue LoadError
 end
 
 begin
-  require 'spec/rake/spectask'
+  require 'rspec/core/rake_task'
 
   desc 'Default: run unit tests.'
   task :default => :spec
 
   desc 'Test the loops plugin.'
-  Spec::Rake::SpecTask.new(:spec) do |t|
-    t.libs << 'lib'
+  RSpec::Core::RakeTask.new do |t|
     t.pattern = 'spec/**/*_spec.rb'
     t.verbose = true
     t.spec_opts = ['-cfs']
