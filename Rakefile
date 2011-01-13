@@ -26,7 +26,6 @@ begin
   RSpec::Core::RakeTask.new do |t|
     t.pattern = 'spec/**/*_spec.rb'
     t.verbose = true
-    t.spec_opts = ['-cfs']
   end
 rescue LoadError
   puts 'RSpec not available. Install it with: sudo gem install rspec'
