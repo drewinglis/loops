@@ -24,6 +24,7 @@ begin
 
   desc 'Test the loops plugin.'
   RSpec::Core::RakeTask.new do |t|
+    t.ruby_opts = %w(-I .)
     t.pattern = 'spec/**/*_spec.rb'
     t.verbose = true
   end

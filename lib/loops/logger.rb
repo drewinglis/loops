@@ -2,7 +2,7 @@ require 'logger'
 require 'delegate'
 require 'fileutils'
 
-class Loops::Logger < ::Delegator
+class Loops::Logger < ::SimpleDelegator
   # @return [Boolean]
   #   A value indicating whether all logging output should be
   #   also duplicated to the console.
