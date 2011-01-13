@@ -125,8 +125,8 @@ describe Loops::CLI do
 
     describe 'in #find_command_possibilities' do
       it 'should return a list of possible commands' do
-        @cli.find_command_possibilities('s').should == %w(start stats stop)
-        @cli.find_command_possibilities('sta').should == %w(start stats)
+        @cli.find_command_possibilities('s').sort.should == %w(start stats stop)
+        @cli.find_command_possibilities('sta').sort.should == %w(start stats)
         @cli.find_command_possibilities('star').should == %w(start)
         @cli.find_command_possibilities('l').should == %w(list)
         @cli.find_command_possibilities('o').should == []
