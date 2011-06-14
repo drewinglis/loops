@@ -65,7 +65,7 @@ describe Loops::CLI do
       end
 
       it 'should extract command when passed' do
-        cli = Loops::CLI.parse(@args << 'list')
+        cli = Loops::CLI.parse(@args)
         cli.options[:command].should == 'list'
       end
 
@@ -99,7 +99,7 @@ describe Loops::CLI do
 
     context 'with Rails framework' do
       before :each do
-        @args = [ 'list', '-r', File.dirname(__FILE__) + '/../rails' ]
+        @args = [ 'start', 'test', '-r', File.dirname(__FILE__) + '/../rails' ]
         Loops::CLI.parse(@args)
       end
 
